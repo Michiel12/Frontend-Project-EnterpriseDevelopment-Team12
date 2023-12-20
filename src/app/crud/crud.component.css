@@ -1,0 +1,31 @@
+article {
+    border: 2px solid lightgrey;
+    box-shadow: 2px 2px 2px lightgrey;
+    padding: 10px;
+    min-width:250px;
+    max-width:600px;
+    margin: 10px auto;
+}
+
+img {
+    max-width: 100%;
+    height:auto;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-style:italic;
+    text-align: center;
+}
+
+article p {
+    text-align: justify;
+}
+
+article footer {
+    font-style:italic;
+    font-variant:small-caps;
+}

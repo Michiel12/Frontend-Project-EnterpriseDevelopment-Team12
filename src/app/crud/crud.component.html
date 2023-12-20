@@ -1,0 +1,52 @@
+<!-- <div class="mt-2 rounded bg-secondaryButton">
+    <div
+      class="px-6 py-4"
+      [ngClass]="canEdit ? 'cursor-pointer' : ''"
+      (click)="showEditModal(activity)"
+      (keydown)="showEditModal(activity)"
+      tabindex="0">
+      <div class="flex row">
+        <div
+          class="flex me-auto text-start font-bold sm:text-xl text-base mb-2">
+          {{ activity.title }}
+        </div>
+        <div class="flex text-end font-bold sm:text-xl text-base mb-2">
+          {{
+            activity.startDate.toLocaleString({
+              hour: '2-digit',
+              minute: '2-digit'
+            })
+          }}
+          @if (activity.activityTypeId !== 1) {
+            -
+            {{
+              activity.endDate.toLocaleString({
+                hour: '2-digit',
+                minute: '2-digit'
+              })
+            }}
+          }
+        </div>
+      </div>
+      <div class="flex justify-between">
+        <p
+          class="text-gray-700 my-auto sm:text-base text-sm w-40 lg:w-72 truncate">
+          {{ activity.description }}
+        </p>
+        @if (activity.url !== '') {
+          <button
+            class="hover:bg-slate-300 sm:text-base text-sm transition-all p-2 rounded"
+            (click)="ticketmasterClick($event, activity.url!)">
+            Tickets
+          </button>
+        }
+        @if (canEdit) {
+          <app-delete-confirmation-modal
+            class="my-auto"
+            [type]="'activiteit'"
+            (click)="deleteButtonClicked($event)"
+            (delete)="delete(activity.id)"></app-delete-confirmation-modal>
+        }
+      </div>
+    </div>
+  </div> -->
