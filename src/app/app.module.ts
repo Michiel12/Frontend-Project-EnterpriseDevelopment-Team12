@@ -7,10 +7,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CrudComponent } from './crud/crud.component';
 import { RaceComponent } from './race/race.component';
+import { RaceFormComponent } from './race-form/race-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RaceFormComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +20,7 @@ import { RaceComponent } from './race/race.component';
     RaceComponent,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

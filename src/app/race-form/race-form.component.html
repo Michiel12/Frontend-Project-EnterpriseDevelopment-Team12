@@ -1,0 +1,102 @@
+<div class="container mx-auto mt-8 p-20">
+  <div
+    class="rounded p-4 mb-4 text-lg bg-red-200 text-red-800 border-2 border-red-300"
+    *ngIf="isSubmitted && errorMessage"
+  >
+    {{ errorMessage }}
+  </div>
+  <form (ngSubmit)="onSubmit()" #raceForm="ngForm">
+    <div class="mb-6">
+      <label for="raceName" class="block mb-2 text-sm font-medium text-gray-900"
+        >Name</label
+      >
+      <input
+        type="text"
+        id="raceName"
+        name="raceName"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        placeholder="Name"
+        required
+        [(ngModel)]="race.raceName"
+        #raceName="ngModel"
+      />
+      <div [hidden]="raceName.valid || raceName.pristine" class="text-red-500 mt-2">
+        Name is required
+      </div>
+    </div>
+
+    <div class="mb-6">
+      <label for="raceDate" class="block mb-2 text-sm font-medium text-gray-900"
+        >Date</label
+      >
+      <input
+        type="date"
+        id="raceDate"
+        name="raceDate"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        placeholder="Date"
+        required
+        [(ngModel)]="race.raceDate"
+        #raceDate="ngModel"
+      />
+      <div [hidden]="raceDate.valid || raceDate.pristine" class="text-red-500 mt-2">
+        Date is required
+      </div>
+    </div>
+
+    <div class="mb-6">
+      <label for="circuitId" class="block mb-2 text-sm font-medium text-gray-900"
+        >Circuit</label
+      >
+      <input
+        type="text"
+        id="circuitId"
+        name="circuitId"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        placeholder="Circuit"
+        required
+        [(ngModel)]="race.circuitId"
+        #circuitId="ngModel"
+      />
+      <div [hidden]="circuitId.valid || circuitId.pristine" class="text-red-500 mt-2">
+        Circuit is required
+      </div>
+    </div>
+
+    <div class="mb-6">
+      <label for="teamId" class="block mb-2 text-sm font-medium text-gray-900"
+        >Team</label
+      >
+      <input
+        type="text"
+        id="teamId"
+        name="teamId"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        placeholder="Team"
+        required
+        [(ngModel)]="race.teamId"
+        #teamId="ngModel"
+      />
+      <div [hidden]="teamId.valid || teamId.pristine" class="text-red-500 mt-2">
+        Team is required
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      *ngIf="isCreate"
+      [disabled]="!raceForm.form.valid || isSubmitted"
+      class="text-white bg-blue-700 enabled:hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center disabled:opacity-75"
+    >
+      Add
+    </button>
+    <button
+      type="submit"
+      *ngIf="isUpdate"
+      [disabled]="!raceForm.form.valid || isSubmitted"
+      class="text-white bg-blue-700 enabled:hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center disabled:opacity-75"
+    >
+      Save
+    </button>
+  </form>
+</div>
