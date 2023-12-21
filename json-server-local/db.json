@@ -1,0 +1,32 @@
+{
+  "races": [
+    {
+      "id": 1,
+      "raceName": "Spa Prix",
+      "raceDate": "2023-12-20T12:00:00Z",
+      "circuitId": 1,
+      "teamId": 1
+    },
+    {
+      "id": 2,
+      "raceName": "Zandvoort Grand Prix",
+      "raceDate": "2023-12-20T12:00:00Z",
+      "circuitId": 2,
+      "teamId": 1
+    },
+    {
+      "id": 3,
+      "raceName": "Las Vegas Prix",
+      "raceDate": "2023-12-20T12:00:00Z",
+      "circuitId": 3,
+      "teamId": 2
+    },
+    {
+      "id": 4,
+      "raceName": "Las Vegas Grand Prix",
+      "raceDate": "2023-12-22",
+      "circuitId": "2",
+      "teamId": "4"
+    }
+  ]
+}

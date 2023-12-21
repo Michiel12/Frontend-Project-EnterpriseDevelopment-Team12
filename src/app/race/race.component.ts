@@ -29,15 +29,13 @@ export class RaceComponent implements OnInit {
   }
 
   create() {
-    // BESTAAT NOG NIET
-    //Navigate to form in add mode
-    this.router.navigate(['admin/race/form'], { state: { mode: 'add' } });
+    //Navigate to form in create mode
+    this.router.navigate(['race/form'], { state: { mode: 'create' } });
   }
 
   update(id: number) {
-    // BESTAAT NOG NIET
-    //Navigate to form in edit mode
-    this.router.navigate(['admin/race/form'], { state: { id: id, mode: 'edit' } });
+    //Navigate to form in update mode
+    this.router.navigate(['race/form'], { state: { id: id, mode: 'update' } });
   }
 
   delete(id: number) {
